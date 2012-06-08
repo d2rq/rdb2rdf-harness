@@ -1,0 +1,9 @@
+PREFIX test: <http://purl.org/NET/rdb2rdf-test#>
+PREFIX dct: <http://purl.org/dc/elements/1.1/>
+SELECT ?identifier ?mapping ?result {
+    ?test a test:R2RML;
+        dct:identifier ?identifier;
+        test:output ?result;
+        test:mappingDocument ?mapping.
+}
+ORDER BY ?identifier
