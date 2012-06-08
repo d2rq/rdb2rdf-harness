@@ -1,13 +1,15 @@
-== RDB2RDF Test Harness ==
-This is a pile of 
+## RDB2RDF Test Harness
 
-=== Prerequisites ===
+This is a set of shell scripts for running the W3C RDB2RDF test suite against an R2RML implementation or a Direct Mapping implementation.
+
+### Prerequisites
+
 * Unix environment (tested only on OS X)
 * Jena's `rdfcopy` and `rdfcompare` command line tools on the path
 * ARQ's `sparql` command line tool on the path
 * Mercurial (to download the RDB2RDF test suite)
 
-=== Preparation ===
+### Preparation
 
 Download the test suite:
 
@@ -22,14 +24,14 @@ Edit `run-dm.sh` to suit the Direct Mapping implementation under test. It is inv
 
     run-r2rml.sh database.sql mapping.ttl output.nq
 
-=== Running individual tests ===
+### Running individual tests
 
     ./dm-test.sh D001
     ./r2rml-test.sh D001
 
 The R2RML tester will run all tests in the `D001` directory. It currently cannot run just an individual test.
 
-=== Running all tests ===
+### Running all tests
 
     ./all-dm-tests.sh
     ./all-r2rml-tests.sh
