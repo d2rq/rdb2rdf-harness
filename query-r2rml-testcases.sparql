@@ -1,6 +1,8 @@
 PREFIX test: <http://purl.org/NET/rdb2rdf-test#>
 PREFIX dct: <http://purl.org/dc/elements/1.1/>
-SELECT ?identifier ?mapping ?result {
+# ?dummy adds another field to the end of the result
+# so we don't have to deal with the following line break
+SELECT ?identifier ?mapping ?result ?dummy {
     ?test a test:R2RML;
         dct:identifier ?identifier;
         test:output ?result;
